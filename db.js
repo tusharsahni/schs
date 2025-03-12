@@ -2,12 +2,12 @@ const sql = require('mssql');
 require('dotenv').config();
 
 const config = {
-    user: process.env.DB_USER, // Windows Authentication (if applicable)
-    password: process.env.DB_PASS, // SQL Authentication password
-    server: process.env.DB_SERVER, // "localhost\\SQLEXPRESS" for default instance
-    database: process.env.DB_NAME,
+    server: "localhost",  // Use "localhost\\SQLEXPRESS" if using SQL Express
+    database: "chssdb",
+    user: "sa",  // Replace with your SQL Server username
+    password: "Chss@123",  // Replace with your new password
     options: {
-        encrypt: false, // Set to true if using Azure
+        encrypt: false,  
         trustServerCertificate: true
     }
 };
